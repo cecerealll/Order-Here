@@ -43,7 +43,6 @@ span {
         position: absolute;
         left: 5%;
         top: 20px;
-        // padding:;
     }
     .main-wrapper {
         width: 80%;
@@ -180,6 +179,21 @@ span {
             }
         }
     }
+    .order-conf {
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 0;
+        font-family: $menu-font;
+        h2 {
+            font-size: remCalc(40);
+            text-transform: capitalize;
+            font-family: $menu-font;
+            margin-bottom: 20px;
+        }
+        .conf-num {
+            margin-bottom: 10px;
+        }
+    }
 }
 
 .orders {
@@ -198,14 +212,9 @@ span {
         padding: 50px 0;  
         display: flex;
         flex-wrap: wrap;
-        // display: flex;   
-        // height: 100%;  
-        // width: 30%; 
-        // justify-content: center;
         
         .order-list {
             display: flex;
-            // flex-direction: column;
             justify-content: space-between;
             text-align: center;
             flex-wrap: wrap;
@@ -252,7 +261,6 @@ span {
                         display: flex;
                         justify-content: space-between;
                     }
-                    // width: 50%;
                 }
                 .order-total {
                     position: absolute;
@@ -267,8 +275,3 @@ span {
 
 
 
-
-// body {
-//     // background: blue;
-//     // background: url('./assets/main-background.jpg');
-// }

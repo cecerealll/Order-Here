@@ -17,9 +17,6 @@ class Orders extends React.Component {
         const dbRef = firebase.database().ref('/orders');
         const state = [];
         dbRef.on('value', (orders) => {
-            // console.log(orders.val());
-            // order
-            // userOrders = order
             for(let order in orders.val()) {
                 let userOrders = orders.val()[order];
                 userOrders.key = order;
@@ -44,7 +41,7 @@ class Orders extends React.Component {
     render() {
         return (
             <div className='orders'>
-                    <h1>orders</h1>
+                <h1>orders</h1>
                 <div className ='orders-wrapper'>
                     {/* <div className ='orders' */}
                     {this.state.orders.map((order, i) => {

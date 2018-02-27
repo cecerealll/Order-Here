@@ -13,95 +13,31 @@ class Menu extends React.Component {
             firstname: '',
             lastname: '',
             submitted: false
-            // counter: 0
         };
         this.handleAddToOrder = this.handleAddToOrder.bind(this);
         this.handleSubmitOrder = this.handleSubmitOrder.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.calcTotal = this.calcTotal.bind(this);
-        // this.orderCounter = this.orderCounter.bind(this);
-        // this.showOrder = this.showOrder.bind(this);
     }
     
     
 
     handleChange(e) {
-        // e.preventDefault();
+
         
         this.setState({
             [e.target.id]: e.target.value
-            // number: e.target.value
         });
     }
 
     handleAddToOrder(e) {
-        // e.preventDefault();
-        // const order = this.state.order;
-
-        // console.log(e);
         this.setState({
             order: this.state.order.concat([e])
         });
 
-        // return this.state.order;
-        // return e.target.value;
-        // console.log(this.state.order);
 
     }
 
-    
-    // orderCounter() {
-    //     let orderArray = this.state.order;
-    //     // let newArray = [];
-    //     orderArray.forEach((order) => {
-    //         let count = 0;
-    //         order.count = count;
-
-    //     //     order.count = count;
-    //         // console.log(orderArray);
-    //     });
-    //     console.log(orderArray);
-    // }
-
-        // // });
-        // for(let i = 0; i < orderArray.length; i++) {
-        //     let count = 0;
-        //     for( let j = i; j< orderArray.length; j++) {
-        //         if(i !==j && orderArray[i] === orderArray[j]){
-        //             // console.log(orderArray[j]);
-        //             orderArray[j].count = count;
-        //             count ++;
-        //             newArray.push(orderArray[j]);
-        //         }
-        //         // console.log ('fine');
-        //     }
-        // }
-        //     // orderArray[i].count = count;
-        //     console.log(newArray);
-
-
-        // }
-        // for(let i=0; i<orderArray.length; i++) {
-        //     let counts;
-        //     console.log(orderArray[i])
-        //     if(orderArray[i].food === undefined) {
-        //         orderArray[i].food.counts = 1;
-        //     } else {
-        //         console.log('dup');
-        //     }
-            
-        // }
-        // console.log(orderArray);
-        // let count ={};
-        // orderArray.forEach(function(i) {
-        //     count[i] = (count[i] || 0) + 1
-        //     console.log(i);
-        // });
-
-        // uniqueCount = ["a", "b", "c", "d", "d", "e", "a", "b", "c", "f", "g", "h", "h", "h", "e", "a"];
-        // var count = {};
-        // uniqueCount.forEach(function (i) { count[i] = (count[i] || 0) + 1; });
-        // console.log(count);
 
     
 
@@ -204,18 +140,17 @@ class Menu extends React.Component {
                     : 
                     <div className='order-conf'>
                         <div>
-                        <p>order confirmation</p>
-                        <p>my total {this.calcTotal()}</p>
-                        <p>Thank you {this.state.firstname}     {this.state.lastname} for your order, it will be processed shortly</p>
-                        <p>{this.state.number}</p>
-                            {this.state.order.map((foodItem, i) => {
-                                // for(let food in foodItem){
-                                //     // console.log(foodItem[food]);
-                                // }
-                                return (
-                                    <p key={`${this.state.order.key}-${i}`}>{foodItem.food} {foodItem.price}</p>
-                                )
-                            })}
+                            <h2>order confirmation!</h2>
+                            {/* <p>order confirmation</p> */}
+                            <p>Thank you {this.state.firstname}   {this.state.lastname} for your order! It will be processed shortly</p>
+                            <p className="conf-num"><span>Your Number:</span> {this.state.number}</p>
+                            <p><span>Your Order:</span></p>
+                                {this.state.order.map((foodItem, i) => {
+                                    return (
+                                        <p key={`${this.state.order.key}-${i}`}>{foodItem.food} {foodItem.price}</p>
+                                    )
+                                })}
+                            <p className="conf-total"><span>Your total is</span> ${this.calcTotal()}</p>
                         </div>     
                     </div>}
                 </div>
