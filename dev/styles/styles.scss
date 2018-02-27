@@ -2,10 +2,12 @@
 
 $title-font: 'Pacifico', cursive;
 $menu-font: 'Raleway', sans-serif;
+$primary-color: #f9a825;
 
 @function remCalc($fontSize) {
     @return ($fontSize / 16) * 1rem; // nts: logic behind it: the base font in browswer is 16px divide pixel value by 16 and multiply by 1rem, value imported in remCalc will be calculated into rem value
 }
+
 
 @keyframes picture {
     from {
@@ -21,7 +23,15 @@ span {
     font-weight: bold;
 }
 
-
+.back-button {
+    font-size: remCalc(20);
+    background: $primary-color;
+    border-radius: 50%;
+    padding: 7px 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 .main {
     width: 100%;
     height: 100vh;
@@ -74,12 +84,13 @@ span {
         width: 80%;
         margin: 0 auto;
         padding: 50px 0;
+        position: relative;
         h1 {
             text-align: center;
             font-size: remCalc(70);
             font-family: $title-font;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
         .menu-items {
             display: flex;
@@ -92,11 +103,14 @@ span {
             text-transform: capitalize;
             li {
                 width: 35%;
-                padding: 50px 75px;
+                padding: 30px 40px;
                 margin-bottom: 10px;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
+                border: 1px solid $primary-color;
+                margin-right: 10px;
+                
 
                 .menu-item {
                     display: flex;
@@ -105,12 +119,35 @@ span {
                     
                     // text-align: center;
                     justify-content: space-between;
-                    margin-bottom: 20px;
+                    // margin-bottom: 20px;
                     font-size: remCalc(18);
                     // width: 50%;
+                    p {
+                        margin-bottom: 10px;
+                        font-weight: bold;
+                    }
+                    .price {
+                        color: $primary-color;
+                        margin: 0;
+                    }
+                }
+                .add-to-order {
+                    font-size: remCalc(35);
+                    background: $primary-color;
+                    cursor: pointer;
+                    padding: 0 10px;
+                    border-radius: 50%;
+                    color: white;
+                    margin-top: 10px;
                 }
 
             }
+        }
+        .my-order {
+            position: fixed;
+            width: 20%;
+            right: 10%;
+            top: 25%;
         }
     }
 }
@@ -150,14 +187,18 @@ span {
                 // margin-bottom: 20px;
                 // margin-top: 20px;
                 border: 1px solid #f9a825;
-                padding: 20px 10px;
+                padding: 20px 20px;
                 .order-num {
                     position: absolute;
-                    left: 0;
+                    left: 5px;
                     top: 0;
                     font-size: remCalc(28);
                     color: #f9a825;
+                    font-weight: bold;
                     // align-self: left;
+                }
+                .order-name {
+                    margin-bottom: 20px;
                 }
                 p {
                     margin-bottom: 10px;
@@ -167,13 +208,19 @@ span {
                     flex-wrap: wrap;
                     font-size: remCalc(12);
                     justify-content: space-between;
+                    margin-bottom: 30px;
                     
                     div {
-                        width: 40%;
+                        width: 45%;
                         display: flex;
                         justify-content: space-between;
                     }
                     // width: 50%;
+                }
+                .order-total {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
                 }
             }
         }

@@ -24,7 +24,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      user: 'owner'
+      user: 'customer'
       // set it back to empty string after
     };
     this.handleChange = this.handleChange.bind(this);

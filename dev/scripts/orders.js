@@ -52,7 +52,7 @@ class Orders extends React.Component {
                             <div key={order.key} className='order-list'> 
                                 <div className='order'>
                                     <p className='order-num'> { i + 1 }</p>
-                                    <p className='order-name'><span>First Name:</span>  {order.firstname}, <span>Last Name:</span>   {order.lastname}</p>
+                                    <p className='order-name'><span>Name:</span>  {order.firstname}  {order.lastname}</p>
                                                                
                                     <div className='order-food-list'>{order.food.map((foodItem, i) => {
                                         return (

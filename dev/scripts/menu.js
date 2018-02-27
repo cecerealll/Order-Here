@@ -174,9 +174,9 @@ class Menu extends React.Component {
                                     <li key={i}>
                                         <div className='menu-item' >
                                             <p>{item.food}</p> 
-                                            <p>${item.price}</p>
+                                             <p className='price'>${item.price}</p>
                                         </div>
-                                        <div className='add-to-order' onClick={() => this.handleAddToOrder(item)}>add</div>
+                                        <div className='add-to-order' onClick={() => this.handleAddToOrder(item)}>+</div>
                                     </li>
                                 )
                             
@@ -197,8 +197,9 @@ class Menu extends React.Component {
                                 )
                             })}
                             </div> 
+                            <button>checkout</button>
+
                         </div>    
-                        <button>checkout</button>
                     </form>
                     : 
                     <div className='order-conf'>
