@@ -186,18 +186,18 @@ class Menu extends React.Component {
                             <input type="text" id='number' placeholder='Phone Number' required onChange={this.handleChange} />
                             <input type="text" id='firstname' placeholder='First Name' required onChange={this.handleChange} />
                             <input type="text" id='lastname' placeholder='Last Name' required onChange={this.handleChange}/>   
-                            <p>my total {this.calcTotal()}</p>  
-                            <div><p>my order</p>
+                            <div><p className='my-order-text'>my order</p>
                                 {this.state.order.map((foodItem, i) => {
                                     // for(let food in foodItem){
                                     //     // console.log(foodItem[food]);
                                     // }
                                 return ( 
-                                    <p key={`${this.state.order.key}-${i}`}>{foodItem.food}   {foodItem.price}</p>
+                                    <p key={`${this.state.order.key}-${i}`}>{foodItem.food}   ${foodItem.price}</p>
                                 )
                             })}
                             </div> 
-                            <button>checkout</button>
+                            <p className='total'>my total {this.calcTotal()}</p>    
+                            <button className='checkout'>checkout</button>
 
                         </div>    
                     </form>

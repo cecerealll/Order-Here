@@ -102,14 +102,14 @@ span {
             font-family: $menu-font;
             text-transform: capitalize;
             li {
-                width: 35%;
+                width: 34%;
                 padding: 30px 40px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
                 border: 1px solid $primary-color;
-                margin-right: 10px;
+                margin-right: 20px;
                 
 
                 .menu-item {
@@ -148,6 +148,36 @@ span {
             width: 20%;
             right: 10%;
             top: 25%;
+            font-family: $menu-font;
+            display: flex;
+            // margin-bottom: 20px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            input {
+                width: 70%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid $primary-color;
+            }
+            .total {
+                margin-top: 20px;
+            }
+            .my-order-text {
+                margin-bottom: 10px;
+            }
+            .checkout {
+                font-family: $title-font;
+                text-transform: capitalize;
+                margin-top: 20px;
+                background: $primary-color;
+                font-size: remCalc(18);
+                border-radius: 30px;
+                color: white;
+                padding: 7px 20px;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -166,17 +196,24 @@ span {
         width: 80%;
         margin: 0 auto;
         padding: 50px 0;  
-        display: flex;      
-        justify-content: space-between;
-        
+        display: flex;
+        flex-wrap: wrap;
+        // display: flex;   
+        // height: 100%;  
+        // width: 30%; 
+        // justify-content: center;
         
         .order-list {
             display: flex;
             // flex-direction: column;
+            justify-content: space-between;
             text-align: center;
-            // position: relative;
-            // flex-wrap: wrap;
-            width: 30%;
+            flex-wrap: wrap;
+            // margin-bottom: 10px;
+            // margin-right: 10px;
+            width: 33.33%;
+            // margin-right: 300px;
+            // height: 100%;
             .order {
                 font-family: $menu-font;
                 display: flex;
