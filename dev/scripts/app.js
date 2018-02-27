@@ -17,11 +17,15 @@ firebase.initializeApp(config);
 
 
 
+
+
+
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      user: ''
+      user: 'owner'
+      // set it back to empty string after
     };
     this.handleChange = this.handleChange.bind(this);
     this.backButton =this.backButton.bind(this);
@@ -47,15 +51,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        { this.state.user === 'owner' && <Orders />}
-        {this.state.user === 'customer' && <Menu />} 
-    
-        
-        <p>customer? <input type="radio" name="user" onChange={this.handleChange} value='customer'/></p>
-        <p>owner? <input type="radio" name="user" onChange={this.handleChange} value='owner' /></p>
-        <button onClick={this.backButton}>back</button>                
-        
+      <div className='main'>
+        {this.state.user === 'owner' && 
+        <div>
+          <Orders /> 
+          <button className='back-button' onClick={this.backButton}><i className="fas fa-arrow-left"></i></button>
+        </div>
+        }
+        {this.state.user === 'customer' && 
+        <div>
+          <Menu />
+          <button className='back-button' onClick={this.backButton}><i className="fas fa-arrow-left"></i></button>
+        </div>
+        } 
+        {this.state.user === '' && 
+          <div className='main-wrapper' >
+            <h2>Welcome!</h2>
+            <button onClick={this.handleChange} value='customer'>customer?</button>
+            <button onClick={this.handleChange} value='owner' >owner?</button>
+          </div>   
+        }        
+         
       </div>
     )
   }

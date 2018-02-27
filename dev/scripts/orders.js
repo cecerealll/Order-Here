@@ -43,26 +43,33 @@ class Orders extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.state.orders.map((order, i) => {
-                    return (
-                        <div key={order.key}> 
-                            <p> order# { i + 1 }</p>
-                            <p>{order.firstname}</p>
-                            <p>{order.lastname}</p>
-                            <p>total {this.calcTotal(order.food)}</p>                            
-                            <div>{order.food.map((foodItem, i) => {
-                                return (
-                                    <p key={`${order.key}-${i}`}>{foodItem.food} {foodItem.price}</p>
-                                )
-                            })}
+            <div className='orders'>
+                    <h1>orders</h1>
+                <div className ='orders-wrapper'>
+                    {/* <div className ='orders' */}
+                    {this.state.orders.map((order, i) => {
+                        return (
+                            <div key={order.key} className='order-list'> 
+                                <div className='order'>
+                                    <p className='order-num'> { i + 1 }</p>
+                                    <p className='order-name'><span>First Name:</span>  {order.firstname}, <span>Last Name:</span>   {order.lastname}</p>
+                                    <p className='order-total'><span>Total:</span> ${this.calcTotal(order.food)}</p>                            
+                                    <div>{order.food.map((foodItem, i) => {
+                                        return (
+                                            <p key={`${order.key}-${i}`} className='order-food'>{foodItem.food} ${foodItem.price}</p>
+                                        )
+                                    })}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         )
     }
 }
 
 export default Orders;
+
+// issue with ordering without
