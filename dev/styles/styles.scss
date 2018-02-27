@@ -117,6 +117,7 @@ span {
 
 .orders {
     background: white;
+    height: 100vh;
     h1 {
         text-align: center;
         font-size: remCalc(70);
@@ -157,6 +158,22 @@ span {
                     font-size: remCalc(28);
                     color: #f9a825;
                     // align-self: left;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+                .order-food-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: remCalc(12);
+                    justify-content: space-between;
+                    
+                    div {
+                        width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    // width: 50%;
                 }
             }
         }

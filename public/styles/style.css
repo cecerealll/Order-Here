@@ -1,0 +1,165 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@keyframes picture {
+  from {
+    background-position: 0 -1000px; }
+  to {
+    background-position: 0 2000px; } }
+
+span {
+  font-weight: bold; }
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/main-background.jpg") repeat bottom;
+  background-size: cover;
+  animation: picture 50s linear infinite;
+  position: relative; }
+  .main .back-button {
+    position: absolute;
+    left: 5%;
+    top: 20px; }
+  .main .main-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8); }
+    .main .main-wrapper h2 {
+      font-size: 5.625rem;
+      font-family: "Pacifico", cursive;
+      margin-bottom: 50px; }
+    .main .main-wrapper button {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px 30px;
+      font-size: 1.5625rem;
+      margin-bottom: 20px;
+      font-family: "Pacifico", cursive;
+      border-radius: 20px;
+      text-transform: capitalize;
+      color: rgba(0, 0, 0, 0.7);
+      cursor: pointer; }
+
+.menu {
+  background: white; }
+  .menu .menu-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0; }
+    .menu .menu-wrapper h1 {
+      text-align: center;
+      font-size: 4.375rem;
+      font-family: "Pacifico", cursive;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    .menu .menu-wrapper .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      text-transform: capitalize; }
+      .menu .menu-wrapper .menu-items li {
+        width: 35%;
+        padding: 50px 75px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; }
+        .menu .menu-wrapper .menu-items li .menu-item {
+          display: flex;
+          padding: 10px 10px;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          font-size: 1.125rem; }
+
+.orders {
+  background: white;
+  height: 100vh; }
+  .orders h1 {
+    text-align: center;
+    font-size: 4.375rem;
+    font-family: "Pacifico", cursive;
+    text-transform: uppercase;
+    margin: 50px 0 20px 0; }
+  .orders .orders-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between; }
+    .orders .orders-wrapper .order-list {
+      display: flex;
+      text-align: center;
+      width: 30%; }
+      .orders .orders-wrapper .order-list .order {
+        font-family: "Raleway", sans-serif;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        border: 1px solid #f9a825;
+        padding: 20px 10px; }
+        .orders .orders-wrapper .order-list .order .order-num {
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: 1.75rem;
+          color: #f9a825; }
+        .orders .orders-wrapper .order-list .order p {
+          margin-bottom: 10px; }
+        .orders .orders-wrapper .order-list .order .order-food-list {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 0.75rem;
+          justify-content: space-between; }
+          .orders .orders-wrapper .order-list .order .order-food-list div {
+            width: 40%;
+            display: flex;
+            justify-content: space-between; }
